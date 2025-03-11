@@ -21,7 +21,6 @@ pip install git+https://github.com/ShiJbey/dramatis.git
 
 The best way to get started is by running the samples. Customizing your own simulation will involve many of the same steps.
 
-
 ## 🤝 License
 
 This project is licensed under the [MIT License](./LICENSE).
