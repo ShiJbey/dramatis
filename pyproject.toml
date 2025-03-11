@@ -1,0 +1,65 @@
+[project]
+name = "dramatis"
+dynamic = ["version"]
+authors = [{ name = "Shi Johnson-Bey", email = "shijbey@gmail.com" }]
+description = "A small framework for simulationist interactive storytelling."
+keywords = [
+    "dramatis",
+    "social simulation",
+    "games",
+    "simulation",
+    "artificial intelligence",
+    "agent-based modeling",
+    "multi-agent systems",
+    "emergent narrative",
+    "narrative generation",
+    "interactive storytelling",
+    "settlement simulation",
+]
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Games/Entertainment :: Simulation",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Artificial Life",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+]
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = ["ordered-set>=4.1.0", "drolta>=0.3.0"]
+
+[project.urls]
+Homepage = "https://github.com/ShiJbey/dramatis/"
+History = "https://github.com/ShiJbey/dramatis/CHANGELOG.md"
+Tracker = "https://github.com/ShiJbey/dramatis/issues"
+Source = "https://github.com/ShiJbey/dramatis/"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dramatis"]
+
+[tool.hatch.version]
+path = "src/dramatis/__init__.py"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = ["tests"]
+
+[tool.isort]
+profile = "black"
+default_section = "THIRDPARTY"
+known_first_party = "dramatis"
+src_paths = ["src/dramatis", "tests", "samples"]
